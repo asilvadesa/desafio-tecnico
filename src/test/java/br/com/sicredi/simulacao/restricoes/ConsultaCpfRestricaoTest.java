@@ -32,6 +32,7 @@ public class ConsultaCpfRestricaoTest {
     @MethodSource("br.com.sicredi.simulacao.factory.GeradorCpfDataFactory#geradorCpf")
     void validaConsultaCpfSemRestricao(){
         Response response = consultaCpfSeTemRestricao(geradorCpf());
-        System.out.println(response.statusCode());
+        response.then()
+                .statusCode(HttpStatus.SC_NO_CONTENT);
     }
 }
