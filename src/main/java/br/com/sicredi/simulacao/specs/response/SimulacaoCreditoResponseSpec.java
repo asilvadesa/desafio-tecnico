@@ -5,6 +5,8 @@ import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.ResponseSpecification;
 import org.apache.http.HttpStatus;
 
+import java.text.MessageFormat;
+
 import static org.hamcrest.Matchers.*;
 
 public class SimulacaoCreditoResponseSpec {
@@ -19,6 +21,18 @@ public class SimulacaoCreditoResponseSpec {
     public static ResponseSpecification validaCadastroNovaSimulacaoSpec(Simulacao simulacao){
         return new ResponseSpecBuilder()
                 .expectStatusCode(HttpStatus.SC_CREATED)
+                .expectBody("nome", is(simulacao.getNome()))
+                .expectBody("cpf", is(simulacao.getCpf()))
+                .expectBody("email",is(simulacao.getEmail()))
+                .expectBody("valor", is(simulacao.getValor()))
+                .expectBody("parcelas",is(simulacao.getParcelas()))
+                .expectBody("seguro", is(simulacao.getSeguro()))
+                .build();
+    }
+
+    public static ResponseSpecification validaBuscaSimulacaoAtravesCpfSpec(Simulacao simulacao){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(HttpStatus.SC_OK)
                 .expectBody("nome", is(simulacao.getNome()))
                 .expectBody("cpf", is(simulacao.getCpf()))
                 .expectBody("email",is(simulacao.getEmail()))
@@ -48,6 +62,13 @@ public class SimulacaoCreditoResponseSpec {
         return new ResponseSpecBuilder()
                 .expectStatusCode(HttpStatus.SC_CONFLICT)
                 .expectBody("mensagem", is("CPF já existente"))
+                .build();
+    }
+
+    public static ResponseSpecification validaBuscaSimulacaoComCpfInexistente(String cpf){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(HttpStatus.SC_NOT_FOUND)
+                .expectBody("mensagem", is(MessageFormat.format("O CPF {0} possui restrição", cpf)))
                 .build();
     }
 }

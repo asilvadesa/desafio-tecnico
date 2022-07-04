@@ -57,12 +57,12 @@ public class SimulacaoTest {
     void validaInserirNovaSimulacaoComFaltaDeInformacoesDeParcelasEValor(){
         Simulacao simulacao = criaSimulacaoComFaltaDeInformacoes();
         given()
-                .spec(simulacaoCreditoSpecs())
-                .basePath(basePah)
-                .body(simulacao)
-                .post()
-                .then()
-                .spec(validaCadastroNovaSimulacaoSemInformacaoDeParcelaEValorSpec());
+            .spec(simulacaoCreditoSpecs())
+            .basePath(basePah)
+            .body(simulacao)
+        .post()
+            .then()
+        .spec(validaCadastroNovaSimulacaoSemInformacaoDeParcelaEValorSpec());
     }
 
     @Test
@@ -70,20 +70,52 @@ public class SimulacaoTest {
         Simulacao simulacao = criaSimulacao();
 
         given()
-                .spec(simulacaoCreditoSpecs())
-                .basePath(basePah)
-                .body(simulacao)
-                .post()
-                .then()
-                .spec(validaCadastroNovaSimulacaoSpec(simulacao));
+            .spec(simulacaoCreditoSpecs())
+            .basePath(basePah)
+            .body(simulacao)
+        .post()
+            .then()
+        .spec(validaCadastroNovaSimulacaoSpec(simulacao));
+
+        given()
+            .spec(simulacaoCreditoSpecs())
+            .basePath(basePah)
+            .body(simulacao)
+        .post()
+            .then()
+        .spec(validaCadastroNovaSimulacaoComCpfJaExistente());
+
+    }
+
+    @Test
+    void validaRetornoDeUmaSimulacaoAtracesDoCpf(){
+        Simulacao simulacao = criaSimulacao();
+
+        given()
+            .spec(simulacaoCreditoSpecs())
+            .basePath(basePah)
+            .body(simulacao)
+        .post()
+            .then()
+            .spec(validaCadastroNovaSimulacaoSpec(simulacao));
+
+        given()
+            .spec(simulacaoCreditoSpecs())
+            .basePath(basePah)
+        .get(simulacao.getCpf())
+            .then()
+            .spec(validaBuscaSimulacaoAtravesCpfSpec(simulacao));
+    }
+
+    @Test
+    void validaRetornoDeUmaSimulacaoAtracesDoCpfInexistente(){
+        Simulacao simulacao = criaSimulacao();
 
         given()
                 .spec(simulacaoCreditoSpecs())
                 .basePath(basePah)
-                .body(simulacao)
-                .post()
-                .then()
-                .spec(validaCadastroNovaSimulacaoComCpfJaExistente());
-
+                .get(simulacao.getCpf())
+                .then().log().all()
+               .spec(validaBuscaSimulacaoComCpfInexistente(simulacao.getCpf()));
     }
 }
