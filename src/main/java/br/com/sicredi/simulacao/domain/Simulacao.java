@@ -1,12 +1,9 @@
 package br.com.sicredi.simulacao.domain;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
-@Getter
+@Data
 @Builder
-@ToString
 public class Simulacao {
     private String nome;
     private String cpf;

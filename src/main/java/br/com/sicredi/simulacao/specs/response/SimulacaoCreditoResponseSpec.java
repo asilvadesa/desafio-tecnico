@@ -71,4 +71,12 @@ public class SimulacaoCreditoResponseSpec {
                 .expectBody("mensagem", is(MessageFormat.format("O CPF {0} possui restrição", cpf)))
                 .build();
     }
+
+    public static ResponseSpecification validaAtualizaCpfComRestricao(String cpf){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(HttpStatus.SC_CONFLICT)
+                .expectBody("mensagem", is(MessageFormat.format("O CPF {0} possui restrição", cpf)))
+                .build();
+    }
+
 }
