@@ -168,12 +168,49 @@ public class SimulacaoTest {
         simulacao.setCpf(cpf);
 
         given()
-                .spec(simulacaoCreditoSpecs())
-                .basePath(basePah)
-                .body(simulacao)
-                .put(cpf)
-                .then()
-                .spec(validaAtualizaCpfComRestricao(cpf));
+            .spec(simulacaoCreditoSpecs())
+            .basePath(basePah)
+            .body(simulacao)
+        .put(cpf)
+        .then()
+            .spec(validaAtualizaCpfComRestricao(cpf));
     }
 
+    @Test
+    void validaRemoveSimulacaoExistenteAtravesCpf(){
+        Simulacao simulacao = criaSimulacao();
+        given()
+            .spec(simulacaoCreditoSpecs())
+            .basePath(basePah)
+            .body(simulacao)
+        .post()
+            .then()
+            .spec(validaCadastroNovaSimulacaoSpec(simulacao));
+
+        given()
+            .spec(simulacaoCreditoSpecs())
+            .basePath(basePah)
+        .delete(simulacao.getCpf())
+                .then()
+                .statusCode(HttpStatus.SC_OK);
+
+        given()
+                .spec(simulacaoCreditoSpecs())
+                .basePath(basePah)
+                .get(simulacao.getCpf())
+                .then()
+                .statusCode(HttpStatus.SC_NOT_FOUND);
+    }
+
+    @Test
+    void validaDeletarSimulacaoComCpfInexistente(){
+
+        Simulacao simulacao = criaSimulacao();
+        given()
+            .spec(simulacaoCreditoSpecs())
+            .basePath(basePah)
+        .delete(simulacao.getCpf())
+            .then()
+            .statusCode(HttpStatus.SC_NOT_FOUND);
+    }
 }
