@@ -44,4 +44,10 @@ public class SimulacaoCreditoResponseSpec {
                 .expectBody("erros.valor", is("Valor não pode ser vazio"))
                 .build();
     }
+    public static ResponseSpecification validaCadastroNovaSimulacaoComCpfJaExistente(){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(HttpStatus.SC_CONFLICT)
+                .expectBody("mensagem", is("CPF já existente"))
+                .build();
+    }
 }

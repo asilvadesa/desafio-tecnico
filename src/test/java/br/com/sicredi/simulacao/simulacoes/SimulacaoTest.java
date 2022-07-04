@@ -64,4 +64,26 @@ public class SimulacaoTest {
                 .then()
                 .spec(validaCadastroNovaSimulacaoSemInformacaoDeParcelaEValorSpec());
     }
+
+    @Test
+    void validaCasdastroSimulacaoComCpfJaExistente(){
+        Simulacao simulacao = criaSimulacao();
+
+        given()
+                .spec(simulacaoCreditoSpecs())
+                .basePath(basePah)
+                .body(simulacao)
+                .post()
+                .then()
+                .spec(validaCadastroNovaSimulacaoSpec(simulacao));
+
+        given()
+                .spec(simulacaoCreditoSpecs())
+                .basePath(basePah)
+                .body(simulacao)
+                .post()
+                .then()
+                .spec(validaCadastroNovaSimulacaoComCpfJaExistente());
+
+    }
 }
