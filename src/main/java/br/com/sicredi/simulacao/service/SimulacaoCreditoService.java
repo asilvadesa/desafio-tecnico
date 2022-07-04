@@ -2,7 +2,7 @@ package br.com.sicredi.simulacao.service;
 
 import io.restassured.response.Response;
 
-import static br.com.sicredi.simulacao.specs.SimulacaoCreditoSpec.simulacaoCreditoSpecs;
+import static br.com.sicredi.simulacao.specs.request.SimulacaoCreditoRequestSpec.simulacaoCreditoSpecs;
 import static io.restassured.RestAssured.given;
 
 
