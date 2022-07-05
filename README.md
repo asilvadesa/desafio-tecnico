@@ -10,6 +10,7 @@
 | Contrato  | `mvn -Dtests=contrato test`   |
 
 ***
-####Gerar relatório: 
+
+#### Gerar relatório: 
 - `mvn allure:serve` 
 - `mvn allure:report`
