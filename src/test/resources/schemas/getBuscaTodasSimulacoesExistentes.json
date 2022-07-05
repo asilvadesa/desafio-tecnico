@@ -1,0 +1,419 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "default": [],
+  "title": "Root Schema",
+  "items": {
+    "type": "object",
+    "title": "A Schema",
+    "required": [
+      "id",
+      "nome",
+      "cpf",
+      "email",
+      "valor",
+      "parcelas",
+      "seguro"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer",
+        "title": "The id Schema",
+        "examples": [
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          24,
+          25,
+          26
+        ]
+      },
+      "nome": {
+        "type": "string",
+        "title": "The nome Schema",
+        "examples": [
+          "Fulano",
+          "Deltrano",
+          "Mr. Ollie Hamill",
+          "Denna Veum",
+          "Drema Hintz",
+          "Lizzie Botsford",
+          "Jamila Cummerata",
+          "Dr. Vern Russel",
+          "Meta Auer",
+          "Ellan O'Kon",
+          "Miss Arianne Bayer",
+          "Mr. Rosalind Dare",
+          "Lea Abshire",
+          "Benedict Kerluke",
+          "Azalee Morar"
+        ]
+      },
+      "cpf": {
+        "type": "string",
+        "title": "The cpf Schema",
+        "examples": [
+          "66414919004",
+          "17822386034",
+          "65194836032",
+          "03797160253",
+          "53176488638",
+          "85000557149",
+          "78048448604",
+          "56110991111",
+          "47863469611",
+          "21702305784",
+          "38002370126",
+          "21214903351",
+          "00108704760",
+          "91027861268",
+          "78358691308"
+        ]
+      },
+      "email": {
+        "type": "string",
+        "title": "The email Schema",
+        "examples": [
+          "fulano@gmail.com",
+          "deltrano@gmail.com",
+          "Spencer@faker.com",
+          "Nelson@faker.com",
+          "Arlen@faker.com",
+          "Holli@faker.com",
+          "Damien@faker.com",
+          "Shanna@faker.com",
+          "Edythe@faker.com",
+          "Mana@faker.com",
+          "Giuseppina@faker.com",
+          "Gregory@faker.com",
+          "Ferdinand@faker.com",
+          "Elliot@faker.com",
+          "Norene@faker.com"
+        ]
+      },
+      "valor": {
+        "type": "integer",
+        "title": "The valor Schema",
+        "examples": [
+          11000,
+          20000,
+          6171,
+          1978,
+          5150,
+          3054,
+          7205,
+          818,
+          2920,
+          6641,
+          5713,
+          1161,
+          8112,
+          2895,
+          4645
+        ]
+      },
+      "parcelas": {
+        "type": "integer",
+        "title": "The parcelas Schema",
+        "examples": [
+          3,
+          5,
+          2,
+          9,
+          6,
+          7
+        ]
+      },
+      "seguro": {
+        "type": "boolean",
+        "title": "The seguro Schema",
+        "examples": [
+          true,
+          false
+        ]
+      }
+    },
+    "examples": [{
+      "id": 11,
+      "nome": "Fulano",
+      "cpf": "66414919004",
+      "email": "fulano@gmail.com",
+      "valor": 11000,
+      "parcelas": 3,
+      "seguro": true
+    },
+      {
+        "id": 12,
+        "nome": "Deltrano",
+        "cpf": "17822386034",
+        "email": "deltrano@gmail.com",
+        "valor": 20000,
+        "parcelas": 5,
+        "seguro": false
+      },
+      {
+        "id": 13,
+        "nome": "Mr. Ollie Hamill",
+        "cpf": "65194836032",
+        "email": "Spencer@faker.com",
+        "valor": 6171,
+        "parcelas": 3,
+        "seguro": false
+      },
+      {
+        "id": 14,
+        "nome": "Denna Veum",
+        "cpf": "03797160253",
+        "email": "Nelson@faker.com",
+        "valor": 1978,
+        "parcelas": 3,
+        "seguro": false
+      },
+      {
+        "id": 15,
+        "nome": "Drema Hintz",
+        "cpf": "53176488638",
+        "email": "Arlen@faker.com",
+        "valor": 5150,
+        "parcelas": 2,
+        "seguro": false
+      },
+      {
+        "id": 16,
+        "nome": "Lizzie Botsford",
+        "cpf": "85000557149",
+        "email": "Holli@faker.com",
+        "valor": 3054,
+        "parcelas": 2,
+        "seguro": false
+      },
+      {
+        "id": 17,
+        "nome": "Jamila Cummerata",
+        "cpf": "78048448604",
+        "email": "Damien@faker.com",
+        "valor": 7205,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 18,
+        "nome": "Dr. Vern Russel",
+        "cpf": "56110991111",
+        "email": "Shanna@faker.com",
+        "valor": 818,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 19,
+        "nome": "Meta Auer",
+        "cpf": "47863469611",
+        "email": "Edythe@faker.com",
+        "valor": 2920,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 20,
+        "nome": "Ellan O'Kon",
+        "cpf": "21702305784",
+        "email": "Mana@faker.com",
+        "valor": 6641,
+        "parcelas": 6,
+        "seguro": false
+      },
+      {
+        "id": 21,
+        "nome": "Miss Arianne Bayer",
+        "cpf": "38002370126",
+        "email": "Giuseppina@faker.com",
+        "valor": 5713,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 22,
+        "nome": "Mr. Rosalind Dare",
+        "cpf": "21214903351",
+        "email": "Gregory@faker.com",
+        "valor": 1161,
+        "parcelas": 3,
+        "seguro": false
+      },
+      {
+        "id": 24,
+        "nome": "Lea Abshire",
+        "cpf": "00108704760",
+        "email": "Ferdinand@faker.com",
+        "valor": 8112,
+        "parcelas": 7,
+        "seguro": false
+      },
+      {
+        "id": 25,
+        "nome": "Benedict Kerluke",
+        "cpf": "91027861268",
+        "email": "Elliot@faker.com",
+        "valor": 2895,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 26,
+        "nome": "Azalee Morar",
+        "cpf": "78358691308",
+        "email": "Norene@faker.com",
+        "valor": 4645,
+        "parcelas": 3,
+        "seguro": false
+      }]
+  },
+  "examples": [
+    [{
+      "id": 11,
+      "nome": "Fulano",
+      "cpf": "66414919004",
+      "email": "fulano@gmail.com",
+      "valor": 11000,
+      "parcelas": 3,
+      "seguro": true
+    },
+      {
+        "id": 12,
+        "nome": "Deltrano",
+        "cpf": "17822386034",
+        "email": "deltrano@gmail.com",
+        "valor": 20000,
+        "parcelas": 5,
+        "seguro": false
+      },
+      {
+        "id": 13,
+        "nome": "Mr. Ollie Hamill",
+        "cpf": "65194836032",
+        "email": "Spencer@faker.com",
+        "valor": 6171,
+        "parcelas": 3,
+        "seguro": false
+      },
+      {
+        "id": 14,
+        "nome": "Denna Veum",
+        "cpf": "03797160253",
+        "email": "Nelson@faker.com",
+        "valor": 1978,
+        "parcelas": 3,
+        "seguro": false
+      },
+      {
+        "id": 15,
+        "nome": "Drema Hintz",
+        "cpf": "53176488638",
+        "email": "Arlen@faker.com",
+        "valor": 5150,
+        "parcelas": 2,
+        "seguro": false
+      },
+      {
+        "id": 16,
+        "nome": "Lizzie Botsford",
+        "cpf": "85000557149",
+        "email": "Holli@faker.com",
+        "valor": 3054,
+        "parcelas": 2,
+        "seguro": false
+      },
+      {
+        "id": 17,
+        "nome": "Jamila Cummerata",
+        "cpf": "78048448604",
+        "email": "Damien@faker.com",
+        "valor": 7205,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 18,
+        "nome": "Dr. Vern Russel",
+        "cpf": "56110991111",
+        "email": "Shanna@faker.com",
+        "valor": 818,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 19,
+        "nome": "Meta Auer",
+        "cpf": "47863469611",
+        "email": "Edythe@faker.com",
+        "valor": 2920,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 20,
+        "nome": "Ellan O'Kon",
+        "cpf": "21702305784",
+        "email": "Mana@faker.com",
+        "valor": 6641,
+        "parcelas": 6,
+        "seguro": false
+      },
+      {
+        "id": 21,
+        "nome": "Miss Arianne Bayer",
+        "cpf": "38002370126",
+        "email": "Giuseppina@faker.com",
+        "valor": 5713,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 22,
+        "nome": "Mr. Rosalind Dare",
+        "cpf": "21214903351",
+        "email": "Gregory@faker.com",
+        "valor": 1161,
+        "parcelas": 3,
+        "seguro": false
+      },
+      {
+        "id": 24,
+        "nome": "Lea Abshire",
+        "cpf": "00108704760",
+        "email": "Ferdinand@faker.com",
+        "valor": 8112,
+        "parcelas": 7,
+        "seguro": false
+      },
+      {
+        "id": 25,
+        "nome": "Benedict Kerluke",
+        "cpf": "91027861268",
+        "email": "Elliot@faker.com",
+        "valor": 2895,
+        "parcelas": 9,
+        "seguro": false
+      },
+      {
+        "id": 26,
+        "nome": "Azalee Morar",
+        "cpf": "78358691308",
+        "email": "Norene@faker.com",
+        "valor": 4645,
+        "parcelas": 3,
+        "seguro": false
+      }]
+  ]
+}

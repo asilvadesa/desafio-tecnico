@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "mensagem"
+  ],
+  "properties": {
+    "mensagem": {
+      "type": "string",
+      "default": "",
+      "title": "The mensagem Schema",
+      "examples": [
+        "O CPF 84809766080 tem problema"
+      ]
+    }
+  },
+  "examples": [{
+    "mensagem": "O CPF 84809766080 tem problema"
+  }]
+}

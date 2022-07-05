@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "id",
+    "nome",
+    "cpf",
+    "email",
+    "valor",
+    "parcelas",
+    "seguro"
+  ],
+  "properties": {
+    "id": {
+      "type": "integer",
+      "default": 0,
+      "title": "The id Schema",
+      "examples": [
+        14
+      ]
+    },
+    "nome": {
+      "type": "string",
+      "default": "",
+      "title": "The nome Schema",
+      "examples": [
+        "Denna Veum"
+      ]
+    },
+    "cpf": {
+      "type": "string",
+      "default": "",
+      "title": "The cpf Schema",
+      "examples": [
+        "03797160253"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "default": "",
+      "title": "The email Schema",
+      "examples": [
+        "Nelson@faker.com"
+      ]
+    },
+    "valor": {
+      "type": "integer",
+      "default": 0,
+      "title": "The valor Schema",
+      "examples": [
+        1978
+      ]
+    },
+    "parcelas": {
+      "type": "integer",
+      "default": 0,
+      "title": "The parcelas Schema",
+      "examples": [
+        3
+      ]
+    },
+    "seguro": {
+      "type": "boolean",
+      "default": false,
+      "title": "The seguro Schema",
+      "examples": [
+        false
+      ]
+    }
+  },
+  "examples": [{
+    "id": 14,
+    "nome": "Denna Veum",
+    "cpf": "03797160253",
+    "email": "Nelson@faker.com",
+    "valor": 1978,
+    "parcelas": 3,
+    "seguro": false
+  }]
+}
