@@ -4,6 +4,7 @@ import br.com.sicredi.simulacao.factory.GeradorCpfDataFactory;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -16,6 +17,7 @@ import static br.com.sicredi.simulacao.service.SimulacaoCreditoService.consultaC
 import static org.hamcrest.Matchers.is;
 
 @DisplayName("Consulta Status do CPF")
+@Tag("funcional")
 public class ConsultaCpfRestricaoTest {
 
     @ParameterizedTest
