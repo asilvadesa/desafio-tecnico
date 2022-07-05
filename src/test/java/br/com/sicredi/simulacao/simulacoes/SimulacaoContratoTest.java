@@ -2,6 +2,7 @@ package br.com.sicredi.simulacao.simulacoes;
 
 import br.com.sicredi.simulacao.domain.Simulacao;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static br.com.sicredi.simulacao.factory.SimulacaoFactory.criaSimulacao;
@@ -10,6 +11,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 @DisplayName("Simulacao Testes de Contrato")
+@Tag("contrato")
 public class SimulacaoContratoTest {
 
     private String path = "/api/v1/simulacoes/";
@@ -49,6 +51,7 @@ public class SimulacaoContratoTest {
     }
 
     @Test
+    @DisplayName("Valida Contrato Cadastro Nova Simulacao")
     void validaCadastroNovaSimulacao(){
         Simulacao simulacao = criaSimulacao();
 
