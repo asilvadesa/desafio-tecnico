@@ -4,6 +4,7 @@ import br.com.sicredi.simulacao.domain.Simulacao;
 import com.github.javafaker.Faker;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
@@ -14,6 +15,7 @@ import static br.com.sicredi.simulacao.specs.response.SimulacaoCreditoResponseSp
 import static br.com.sicredi.simulacao.specs.response.SimulacaoCreditoResponseSpec.validaBuscaSimulacaoAtravesCpfSpec;
 import static io.restassured.RestAssured.given;
 
+@Tag("funcional")
 public class SimulacaoTest {
 
     private String basePah = "/api/v1/simulacoes";
@@ -119,7 +121,7 @@ public class SimulacaoTest {
             .spec(simulacaoCreditoSpecs())
             .basePath(basePah)
         .get(simulacao.getCpf())
-            .then().log().all()
+            .then()
        .spec(validaBuscaSimulacaoComCpfInexistente(simulacao.getCpf()));
     }
 
