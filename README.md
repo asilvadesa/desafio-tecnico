@@ -3,11 +3,11 @@
 #### Para execução do testes:
 
 
-| Testes    | command                       |
-|-----------|-------------------------------|
-| Todos     | `mvn clean test`              |
-| Funcional | `mvn -Dtests=funcional test`  |
-| Contrato  | `mvn -Dtests=contrato test`   |
+| Testes    | command   |
+|-----------|-----------|
+| Todos     | `mvn -PallTests test`        |
+| Funcional | `mvn -Dtests=funcional test` |
+| Contrato  | `mvn -Dtests=contrato test` |
 
 ***
 

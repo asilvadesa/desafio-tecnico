@@ -10,8 +10,8 @@ import static br.com.sicredi.simulacao.specs.request.SimulacaoCreditoRequestSpec
 import static io.restassured.RestAssured.given;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-@DisplayName("Simulacao Testes de Contrato")
 @Tag("contrato")
+@DisplayName("Contrato: Simulacao")
 public class SimulacaoContratoTest {
 
     private String path = "/api/v1/simulacoes/";

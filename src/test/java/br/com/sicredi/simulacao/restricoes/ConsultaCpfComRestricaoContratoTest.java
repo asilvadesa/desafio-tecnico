@@ -10,6 +10,7 @@ import static br.com.sicredi.simulacao.service.SimulacaoCreditoService.consultaC
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 @Tag("contrato")
+@DisplayName("Contrato: Consulta Status do CPF")
 public class ConsultaCpfComRestricaoContratoTest {
 
     private String path = "/api/v1/restricoes/";

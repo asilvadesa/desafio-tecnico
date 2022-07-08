@@ -16,8 +16,9 @@ import static br.com.sicredi.simulacao.factory.GeradorCpfDataFactory.geradorCpf;
 import static br.com.sicredi.simulacao.service.SimulacaoCreditoService.consultaCpfSeTemRestricao;
 import static org.hamcrest.Matchers.is;
 
-@DisplayName("Consulta Status do CPF")
+
 @Tag("funcional")
+@DisplayName("Funcional: Consulta Status do CPF")
 public class ConsultaCpfRestricaoTest {
 
     @ParameterizedTest

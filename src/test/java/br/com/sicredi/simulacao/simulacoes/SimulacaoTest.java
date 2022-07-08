@@ -16,6 +16,7 @@ import static br.com.sicredi.simulacao.specs.response.SimulacaoCreditoResponseSp
 import static io.restassured.RestAssured.given;
 
 @Tag("funcional")
+@DisplayName("Funcional: Simulação")
 public class SimulacaoTest {
 
     private String basePah = "/api/v1/simulacoes";
